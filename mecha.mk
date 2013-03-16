@@ -52,10 +52,6 @@ PRODUCT_PACKAGES += \
     sensors.mecha \
     gps.mecha
 
-# media
-PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/media/hdpi/bootanimation.zip:system/media/bootanimation.zip
-
 # amtel
 PRODUCT_COPY_FILES += \
     device/htc/mecha/system/usr/idc/atmel-touchscreen.idc:system/usr/idc/atmel-touchscreen.idc
@@ -111,15 +107,15 @@ $(call inherit-product, build/target/product/full_base.mk)
 $(call inherit-product, device/htc/msm7x30-common/msm7x30.mk)
 
 # vendor
-$(call inherit-product, vendor/liquid/config/common_phone.mk)
+$(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # products
-PRODUCT_NAME := liquid_mecha
+PRODUCT_NAME := htc_mecha
 PRODUCT_BRAND := verizon_wwe
 PRODUCT_DEVICE := mecha
 PRODUCT_MODEL := ThunderBolt
 PRODUCT_MANUFACTURER := HTC
-PRODUCT_PROPERTY_OVERRIDES += ro.modversion=liquid.mecha.$(shell date +%m%d%y).$(shell date +%H%M%S)
+PRODUCT_PROPERTY_OVERRIDES += ro.modversion=cm.mecha.$(shell date +%m%d%y).$(shell date +%H%M%S)
 
 # overrides
 PRODUCT_BUILD_PROP_OVERRIDES += \

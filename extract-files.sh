@@ -17,7 +17,7 @@ adb pull /system/bin/netmgrd ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/bin/qmuxd ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/bin/rmt_storage ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/bin/snd3254 ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/etc/agps_rm ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+#adb pull /system/etc/agps_rm ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/libaudioalsa.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/libauth.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/libcamera.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
@@ -84,7 +84,7 @@ PRODUCT_COPY_FILES += \\
     vendor/$MANUFACTURER/__DEVICE__/proprietary/qmuxd:/system/bin/qmuxd \\
     vendor/$MANUFACTURER/__DEVICE__/proprietary/rmt_storage:/system/bin/rmt_storage \\
     vendor/$MANUFACTURER/__DEVICE__/proprietary/snd3254:/system/bin/snd3254 \\
-    vendor/$MANUFACTURER/__DEVICE__/proprietary/agps_rm:/system/etc/agps_rm \\
+#    vendor/$MANUFACTURER/__DEVICE__/proprietary/agps_rm:/system/etc/agps_rm \\
     vendor/$MANUFACTURER/__DEVICE__/proprietary/libaudioalsa.so:/system/lib/libaudioalsa.so \\
     vendor/$MANUFACTURER/__DEVICE__/proprietary/libauth.so:/system/lib/libauth.so \\
     vendor/$MANUFACTURER/__DEVICE__/proprietary/libcamera.so:/system/lib/libcamera.so \\
