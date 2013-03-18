@@ -71,9 +71,6 @@ BOARD_KERNEL_CMDLINE := no_console_suspend=1
 BOARD_KERNEL_BASE := 0x05200000
 BOARD_PAGE_SIZE := 4096
 
-#TARGET_SPECIFIC_HEADER_PATH := device/htc/mecha/include
-TARGET_SPECIFIC_HEADER_PATH := device/htc/msm7x30-common/include
-
 # recovery and sdcard blocks
 BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_HAS_NO_SELECT_BUTTON := true
