@@ -17,6 +17,9 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
+# The gps config appropriate for this device
+$(call inherit-product, device/common/gps/gps_us_supl.mk)
+
 ## (1) First, the most specific values, i.e. the aspects that are specific to GSM
 
 PRODUCT_COPY_FILES += \
@@ -137,7 +140,7 @@ PRODUCT_COPY_FILES += \
     device/htc/mecha/system/etc/vold.fstab:system/etc/vold.fstab
 
 # stuff common to all HTC phones
-$(call inherit-product, device/htc/common/common.mk)
+$(call inherit-product-if-exists, device/htc/common/common.mk)
 
 # common msm7x30 configs
 $(call inherit-product, device/htc/msm7x30-common/msm7x30.mk)
@@ -147,22 +150,3 @@ $(call inherit-product, device/htc/mecha/media_htcaudio.mk)
 
 # media profiles and capabilities spec
 $(call inherit-product, device/htc/mecha/media_a1026.mk)
-
-# products
-PRODUCT_NAME := htc_mecha
-PRODUCT_BRAND := verizon_wwe
-PRODUCT_DEVICE := mecha
-PRODUCT_MODEL := ThunderBolt
-PRODUCT_MANUFACTURER := HTC
-PRODUCT_PROPERTY_OVERRIDES += ro.modversion=cm.mecha.$(shell date +%m%d%y).$(shell date +%H%M%S)
-
-# overrides
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_ID=IML74K \
-    BUILD_NUMBER=370649.2 \
-    PRODUCT_NAME=htc_mecha \
-    TARGET_BUILD_TYPE=user \
-    BUILD_VERSION_TAGS=release-keys \
-    PRIVATE_BUILD_DESC="7.00.605.2 CL370649 release-keys" \
-    BUILD_FINGERPRINT=verizon_wwe/htc_mecha/mecha:4.0.3/IML74K/370649.2:user/release-keys
-
