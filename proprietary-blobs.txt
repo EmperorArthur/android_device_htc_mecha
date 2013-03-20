@@ -11,17 +11,13 @@ bin/ipd
 bin/logcat2
 bin/lsc_camera
 bin/netmgrd
-#bin/qcrild
+bin/qcrild
 bin/qmuxd
-#bin/rild_ims
 bin/rmt_storage
 bin/snd3254
-#bin/spkamp
 bin/tc
-#etc/agps_rm
 etc/AudioBTID.csv
 lib/libaudioalsa.so
-#lib/libaudioeq.so
 lib/libauth.so
 lib/libcamera.so
 lib/libcm_fusion.so
@@ -49,7 +45,6 @@ lib/libpbmlib_fusion.so
 lib/libpbmlib.so
 lib/libpdapi.so
 lib/libpdsm_atl.so
-#lib/libping_apps.so
 lib/libping_lte_rpc.so
 lib/libping_mdm.so
 lib/libposteffect.so
@@ -57,8 +52,6 @@ lib/libqdp.so
 lib/libqmiservices.so
 lib/libqmi.so
 lib/libqueue.so
-#lib/libreference-cdma-sms.so
-#lib/libril_ims.so
 lib/libril-qc-1.so
 lib/libril-qcril-hook-oem.so
 lib/libril.so
