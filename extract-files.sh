@@ -20,7 +20,7 @@ MANUFACTURER=htc
 BASE=../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 mkdir -p $BASE
 
-for FILE in `egrep -v '(^#|^$)' proprietary-blobs.txt`; do
+for FILE in `egrep -v '(^#|^$|^ )' proprietary-blobs.txt`; do
 DIR=`dirname $FILE`
     if [ ! -d $BASE/$DIR ]; then
 mkdir -p $BASE/$DIR
