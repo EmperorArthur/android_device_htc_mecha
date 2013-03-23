@@ -70,8 +70,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.cne.be.wlan.sqi.min=0 \
     persist.cne.be.wlan.sqi.max=100
     persist.telephony.support_ipv6=true \
-    persist.telephony.support_ipv4=true \
-    ro.vendor.extension_library=/system/lib/libqc-opt.so
+    persist.telephony.support_ipv4=true
 
 DEVICE_PACKAGE_OVERLAYS += device/htc/mecha/overlay
 

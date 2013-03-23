@@ -26,4 +26,4 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_BUILD_TYPE=user \
     BUILD_VERSION_TAGS=release-keys \
     PRIVATE_BUILD_DESC="7.00.605.2 CL370649 release-keys" \
-    BUILD_FINGERPRINT=verizon_wwe/htc_mecha/mecha:4.0.4/IML74K/370649.2:user/release-keys
+    BUILD_FINGERPRINT=verizon_wwe/htc_mecha/mecha:4.0.4/IMM76L/370649.2:user/release-keys
