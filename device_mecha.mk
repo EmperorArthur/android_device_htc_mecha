@@ -35,7 +35,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.ril.enable.a52=0 \
     ro.ril.enable.a53=1 \
     ro.ril.def.agps.mode=6 \
-    ro.com.google.clientidbase=android-htc \
     ro.com.google.clientidbase.yt=android-htc \
     ro.com.google.clientidbase.am=android-verizon \
     ro.com.google.clientidbase.vs=android-verizon \
