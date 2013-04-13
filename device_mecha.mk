@@ -45,6 +45,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.setupwizard.enable_bypass=1 \
     dalvik.vm.lockprof.threshold=500 \
     dalvik.vm.dexopt-flags=m=y \
+    ro.telephony.call_ring.delay=500 \
     ro.telephony.call_ring.multiple=false \
     persist.telephony.support_ipv6=true \
     persist.telephony.support_ipv4=true

@@ -147,3 +147,11 @@ ro.phone_storage=0
 
 # System Settings
 ro.config.htc.nocheckin = 1
+
+# Twisted Customizations
+ro.media.enc.jpeg.quality=100
+ro.kernel.android.checkjni=0
+persist.sys.camera-sound=1
+drm.service.enabled=true
+#Currently in device_mecha.mk
+#dalvik.vm.lockprof.threshold=750
