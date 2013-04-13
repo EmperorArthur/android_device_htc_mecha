@@ -40,6 +40,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.clientidbase.vs=android-verizon \
     ro.com.google.clientidbase.gmm=android-verizon \
     ro.com.google.clientidbase.ms=android-verizon \
+    ro.com.google.locationfeatures=1 \
     ro.com.google.networklocation=1 \
     ro.setupwizard.enable_bypass=1 \
     dalvik.vm.lockprof.threshold=500 \
