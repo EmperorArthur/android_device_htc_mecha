@@ -64,7 +64,7 @@ TARGET_KERNEL_SOURCE := kernel/htc/mecha
 TARGET_KERNEL_CONFIG := mecha_defconfig
 #TARGET_KERNEL_CUSTOM_TOOLCHAIN := linaro-4.7.2
 TARGET_PREBUILT_KERNEL := device/htc/mecha/kernel/kernel
-#TARGET_RELEASETOOLS_EXTENSIONS := device/htc/common
+TARGET_RELEASETOOLS_EXTENSIONS := device/htc/common
 BOARD_KERNEL_CMDLINE := no_console_suspend=1
 BOARD_KERNEL_BASE := 0x05200000
 BOARD_PAGE_SIZE := 4096
