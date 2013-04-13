@@ -54,6 +54,9 @@ ro.config.svlte1x=true
 
 # RIL Properties
 #telephony.lteOnCdmaDevice=1
+ro.cdma.home.operator.alpha=Verizon
+#ro.cdma.home.operator.numeric=310004
+ro.cdma.home.operator.numeric=310012
 # Default Network Type
 # 8 => CDMA/EVDO/LTE auto mode
 ro.telephony.default_network=8
@@ -91,7 +94,10 @@ persist.sys.usb.config=mass_storage,adb
 #
 # Below not found in Twisted's system.prop
 #
+#RIL?
+ro.htc.device.slot1=RUIM
 
+# from Ace:
 debug.egl.hw=1
 
 # Android Display
@@ -141,8 +147,3 @@ ro.phone_storage=0
 
 # System Settings
 ro.config.htc.nocheckin = 1
-
-# Welly Fang
-ro.cdma.home.operator.numeric=310012
-ro.cdma.home.operator.alpha=Verizon
-ro.htc.device.slot1=RUIM
