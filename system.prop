@@ -1,35 +1,24 @@
 #
 # system.prop for mecha
 #
+# comments are Twisted's adjustments
 
-# Qualcomm Display
-com.qc.hardware=true
-com.qc.hdmi_out=false
-#debug.enabletr=false
-#debug.composition.type=dyn
-debug.composition.type=mdp
-#ro.sf.compbypass.enable=1
-ro.sf.compbypass.enable=0
-dev.pm.dyn_samplingrate=1
-
-# Android Display
-#windowsmgr.max_events_per_sec=275
-windowsmgr.max_events_per_sec=150
-ro.config.disable_hw_accel=false
-debug.fb.rgb565=0
+# Screen Density
 debug.sf.hw=1
-
-# Audio
-#lpa.decode=true
-#lpa.use-stagefright=true
-
+debug.fb.rgb565=0
 ro.sf.lcd_density=240
 
-persist.sys.usb.config=mass_storage,adb
+# Qcom Display
+dev.pm.dyn_samplingrate=1
+ro.sf.compbypass.enable=0
+#ro.sf.compbypass.enable=1
+debug.composition.type=gpu
+#debug.composition.type=mdp
 
-# Retry Configurations
-ro.gsm.2nd_data_retry_config = max_retries=3, 2000, 2000, 2000
-ro.cdma.data_retry_config = max_retries=infinite,0,0,60000,120000,480000,900000
+# Qcom Hardware
+#debug.enabletr=false
+com.qc.hardware=true
+com.qc.hdmi_out=false
 
 # Radio Properties
 rild.libpath=/system/lib/libril-qc-1.so
@@ -43,12 +32,82 @@ persist.rild.nitz_short_ons_0=
 persist.rild.nitz_short_ons_1=
 persist.rild.nitz_short_ons_2=
 persist.rild.nitz_short_ons_3=
+# these properties until DEVICE_PROVISIONED=1 NOT in Twisted
 persist.rild.ril.bva=0
 persist.rild.ril.ltedr=0
 persist.rild.ril.ltedrtable=max_retries=infinite,10000
 persist.rild.ril.adminAPN=vzwadmin
 persist.radio.agps.mode=6
 DEVICE_PROVISIONED=1
+
+# Data Modules
+ro.use_data_netmgrd=true
+persist.data_netmgrd_nint=16
+persist.data_netmgrd_mtu=1428
+
+# Device Supports LTE
+ro.config.lte=true
+# Device Supports EHRPD
+ro.config.ehrpd=true
+# Simultaneous Voice/LTE
+ro.config.svlte1x=true
+
+# RIL Properties
+#telephony.lteOnCdmaDevice=1
+# Default Network Type
+# 8 => CDMA/EVDO/LTE auto mode
+ro.telephony.default_network=8
+ro.telephony.ril.v3=signalstrength
+ro.telephony.ril_class=HTCMechaQualcommRIL
+service.modem.enable=1
+
+# Device Interfaces
+wifi.interface=wlan0
+wifi.supplicant_scan_interval=180
+#mobiledata.interfaces=rmnet_sdio0,rmnet_sdio1
+mobiledata.interfaces=rmnet_sdio0,rmnet_sdio1,wlan0,gprs,ppp0
+
+# jerry.pj_chen [Start]20100730 For Verizon data retry
+ro.cdma.data_retry_config=max_retries=infinite,0,0,60000,120000,480000,900000
+# jerry.pj_chen [Finish]20100730 For Verizon data retry
+
+# OpenGL ES API Level
+ro.opengles.version=131072
+
+# Dalvik Heapsize
+dalvik.vm.heapsize=128m
+#dalvik.vm.heapstartsize=16m
+dalvik.vm.heapstartsize=5m
+dalvik.vm.heapgrowthlimit=64m
+
+# Agps Default Mode
+ro.ril.def.agps.mode=6
+
+# Usb Storage
+ro.vold.umsdirtyratio=40
+persist.service.adb.enable=1
+persist.sys.usb.config=mass_storage,adb
+
+#
+# Below not found in Twisted's system.prop
+#
+
+debug.egl.hw=1
+
+# Android Display
+#windowsmgr.max_events_per_sec=275
+windowsmgr.max_events_per_sec=150
+ro.config.disable_hw_accel=false
+
+# Audio
+#lpa.decode=true
+#lpa.use-stagefright=true
+
+persist.sys.usb.config=mass_storage,adb
+
+# Retry Configurations
+ro.gsm.2nd_data_retry_config = max_retries=3, 2000, 2000, 2000
+ro.cdma.data_retry_config = max_retries=infinite,0,0,60000,120000,480000,900000
 
 # CNE Module
 persist.cne.UseCne=false
@@ -72,59 +131,13 @@ persist.cne.be.do.sqi.max=100
 persist.cne.be.wlan.sqi.min=0
 persist.cne.be.wlan.sqi.max=100
 
-# Data Modules
-ro.use_data_netmgrd=true
-persist.data_netmgrd_nint=16
-persist.data_netmgrd_mtu=1428
-
 # Data Buffers
 net.tcp.buffersize.default=4096,87380,110208,4096,16384,110208
 net.tcp.buffersize.evdo_b=4094,87380,262144,4096,16384,262144
 net.tcp.buffersize.lte=4096,221184,3461120,4096,221184,3461120
 
-# Device Supports LTE
-ro.config.lte=true
-# Device Supports EHRPD
-ro.config.ehrpd=true
-# Simultaneous Voice/LTE
-ro.config.svlte1x=true
-
-# Default Network Type
-# 8 => CDMA/EVDO/LTE auto mode
-ro.telephony.default_network=8
-ro.telephony.ril.v3=signalstrength
-ro.telephony.ril_class=HTCMechaQualcommRIL
-service.modem.enable=1
-
-# Default Interfaces
-wifi.interface=wlan0
-wifi.supplicant_scan_interval=180
-#mobiledata.interfaces=rmnet_sdio0,rmnet_sdio1
-mobiledata.interfaces=rmnet_sdio0,rmnet_sdio1,wlan0,gprs,ppp0
-
-# jerry.pj_chen [Start]20100730 For Verizon data retry
-ro.cdma.data_retry_config=max_retries=infinite,0,0,60000,120000,480000,900000
-# jerry.pj_chen [Finish]20100730 For Verizon data retry
-
-# OpenGL ES API Level
-ro.opengles.version=131072
-
-# Dalvik Heapsize
-dalvik.vm.heapsize=128m
-#dalvik.vm.heapstartsize=16m
-dalvik.vm.heapstartsize=5m
-dalvik.vm.heapgrowthlimit=64m
-
-# Agps Default Mode
-ro.ril.def.agps.mode=6
-
 # Emmc Phone Storage
 ro.phone_storage=0
-
-# Usb Storage
-ro.vold.umsdirtyratio=40
-persist.service.adb.enable=1
-persist.sys.usb.config=mass_storage,adb
 
 # System Settings
 ro.config.htc.nocheckin = 1
