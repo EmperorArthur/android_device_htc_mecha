@@ -47,10 +47,8 @@ BOARD_USE_REVERSE_FFC := true
 
 # gps fix for mecha
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := mecha
-#BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 50000
 
 # usb fix for mecha
-#TARGET_SPECIFIC_HEADER_PATH := device/htc/msm7x30-common/include
 #TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/usb_mass_storage/lun0/file
 
 # Filesystem
