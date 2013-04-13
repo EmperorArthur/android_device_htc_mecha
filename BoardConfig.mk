@@ -33,7 +33,6 @@ USE_CAMERA_STUB := true
 
 # bootloader board name
 TARGET_BOOTLOADER_BOARD_NAME := mecha
-#BOARD_OVERLAY_MINIFICATION_LIMIT := 2
 
 # Use stock libril for now
 TARGET_PROVIDES_LIBRIL := vendor/htc/mecha/proprietary/libril.so
@@ -47,9 +46,6 @@ BOARD_USE_REVERSE_FFC := true
 
 # gps fix for mecha
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := mecha
-
-# usb fix for mecha
-#TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/usb_mass_storage/lun0/file
 
 # Filesystem
 TARGET_USERIMAGES_USE_EXT4 := true
