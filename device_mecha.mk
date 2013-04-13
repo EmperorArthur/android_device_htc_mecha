@@ -127,3 +127,10 @@ $(call inherit-product, device/htc/mecha/media_htcaudio.mk)
 
 # media profiles and capabilities spec
 $(call inherit-product, device/htc/mecha/media_a1026.mk)
+
+# Enable root access for debugging
+ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=0
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.root_access=3 \
+    ro.debuggable=1 \
+    ro.secure=0
