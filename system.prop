@@ -68,7 +68,7 @@ ro.htc.device.slot1=RUIM
 # 8 => CDMA/EVDO/LTE auto mode
 ro.telephony.default_network=8
 ro.telephony.ril.v3=signalstrength
-ro.telephony.ril_class=HTCMechaQualcommRIL
+ro.telephony.ril_class=HTCQualcommRIL
 service.modem.enable=1
 
 # Device Interfaces
