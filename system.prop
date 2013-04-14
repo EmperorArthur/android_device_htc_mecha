@@ -94,6 +94,11 @@ persist.sys.usb.config=mass_storage,adb
 #
 # Below not found in Twisted's system.prop
 #
+
+# Size of font cache in hwui - prevents scrambled text
+ro.hwui.text_cache_width=1024
+ro.hwui.text_cache_height=768
+
 #RIL?
 ro.htc.device.slot1=RUIM
 
