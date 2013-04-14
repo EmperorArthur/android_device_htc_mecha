@@ -62,7 +62,7 @@ ro.config.svlte1x=true
 # RIL Properties
 telephony.lteOnCdmaDevice=1
 ro.cdma.home.operator.alpha=Verizon
-ro.cdma.home.operator.numeric=310012
+ro.cdma.home.operator.numeric=310004
 ro.htc.device.slot1=RUIM
 # Default Network Type
 # 8 => CDMA/EVDO/LTE auto mode
