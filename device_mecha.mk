@@ -127,6 +127,12 @@ $(call inherit-product, device/htc/mecha/media_htcaudio.mk)
 # media profiles and capabilities spec
 $(call inherit-product, device/htc/mecha/media_a1026.mk)
 
+# Default sounds and ringtones
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.config.ringtone=Hydra.ogg \
+    ro.config.notification_sound=Proxima.ogg \
+    ro.config.alarm_alert=Plutonium.ogg
+
 # Enable root access for debugging
 ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=0
 PRODUCT_PROPERTY_OVERRIDES += \
