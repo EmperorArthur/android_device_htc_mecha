@@ -17,9 +17,6 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# The gps config appropriate for this device
-$(call inherit-product, device/common/gps/gps_us_supl.mk)
-
 ## (1) First, the most specific values, i.e. the aspects that are specific to GSM
 
 PRODUCT_COPY_FILES += \
@@ -59,7 +56,10 @@ PRODUCT_COPY_FILES += \
 
 # Device XML Properties
 PRODUCT_COPY_FILES += \
-    device/htc/mecha/system/etc/voicemail-conf.xml:system/etc/voicemail-conf.xml \
+    device/htc/mecha/system/etc/voicemail-conf.xml:system/etc/voicemail-conf.xml
+    
+# GPS Configuration
+PRODUCT_COPY_FILES += \
     device/htc/mecha/system/etc/gps.conf:system/etc/gps.conf
 
 PRODUCT_PACKAGES += \
