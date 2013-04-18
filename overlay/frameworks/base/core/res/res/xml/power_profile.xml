@@ -38,6 +38,7 @@
       <value>3</value>
   </array>
   <array name="cpu.speeds"> <!-- from /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_frequencies -->
+    <value>184320</value>
     <value>245760</value>
     <value>368640</value>
     <value>768000</value>
@@ -52,6 +53,7 @@
   <item name="cpu.idle">3.0</item> <!-- from /sys/class/power_supply/battery/current_now -->
   <!-- Power consumption at different speeds -->
   <array name="cpu.active"> <!-- Estimated -->
+      <value>60</value>
       <value>74.7</value>
       <value>120.6</value>
       <value>154.9</value>
