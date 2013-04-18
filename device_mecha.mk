@@ -14,6 +14,8 @@
 # limitations under the License.
 #
 
+DEVICE_PACKAGE_OVERLAYS += device/htc/mecha/overlay
+
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
@@ -46,8 +48,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.call_ring.multiple=false \
     persist.telephony.support_ipv6=true \
     persist.telephony.support_ipv4=true
-
-DEVICE_PACKAGE_OVERLAYS += device/htc/mecha/overlay
 
 # Devie XML Permissions
 PRODUCT_COPY_FILES += \
