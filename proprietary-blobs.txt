@@ -11,8 +11,8 @@ bin/ipd
 bin/logcat2
 bin/lsc_camera
 bin/netmgrd
-bin/qcrild
 bin/qmuxd
+bin/rild
 bin/rmt_storage
 bin/snd3254
 bin/tc
@@ -64,7 +64,7 @@ xbin/wireless_modem
 
 # vendor_qcom proprietary files
 # Prebuilt CodeAurora libraries
-#lib/libDivxDrm.so
+lib/libDivxDrm.so
 lib/libmm-color-convertor.so
 lib/libmmosal.so
 lib/libmmparser_divxdrmlib.so
