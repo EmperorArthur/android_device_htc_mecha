@@ -51,8 +51,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Devie XML Permissions
 PRODUCT_COPY_FILES += \
-    frameworks/base/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml \
-    frameworks/base/data/etc/android.hardware.camera.front.xml:system/etc/permissions/android.hardware.camera.front.xml
+    frameworks/native/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml \
+    frameworks/native/data/etc/android.hardware.camera.front.xml:system/etc/permissions/android.hardware.camera.front.xml
 
 # Device XML Properties
 PRODUCT_COPY_FILES += \
