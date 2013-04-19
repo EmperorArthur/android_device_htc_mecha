@@ -1,4 +1,3 @@
-windowsmgr.max_events_per_sec=275
 #
 # system.prop for mecha
 #
@@ -10,11 +9,21 @@ ro.sf.lcd_density=240
 
 # Qcom Display
 dev.pm.dyn_samplingrate=1
-ro.sf.compbypass.enable=1
-debug.composition.type=dyn
+ro.sf.compbypass.enable=0
+debug.composition.type=gpu
+# liquid has ro.sf.compbypass.enable=1 + debug.composition.type=dyn
+debug.egl.hw=1
+
+# Android Display
+windowsmgr.max_events_per_sec=150
+ro.config.disable_hw_accel=false
+
+# Size of font cache in hwui - prevents scrambled text
+ro.hwui.text_cache_width=1024
+ro.hwui.text_cache_height=768
 
 # Qcom Hardware
-debug.enabletr=false
+#debug.enabletr=false
 com.qc.hardware=true
 com.qc.hdmi_out=false
 
@@ -30,7 +39,14 @@ persist.rild.nitz_short_ons_0=
 persist.rild.nitz_short_ons_1=
 persist.rild.nitz_short_ons_2=
 persist.rild.nitz_short_ons_3=
+persist.rild.ril.bva=0
+persist.rild.ril.ltedr=0
+persist.rild.ril.ltedrtable=max_retries=infinite,10000
 DEVICE_PROVISIONED=1
+
+# Agps Default Mode
+persist.radio.agps.mode=6
+ro.ril.def.agps.mode=6
 
 # Data Modules
 ro.use_data_netmgrd=true
@@ -46,27 +62,105 @@ ro.config.svlte1x=true
 
 # RIL Properties
 telephony.lteOnCdmaDevice=1
+# Default Network Type
+# 8 => CDMA/EVDO/LTE auto mode
 ro.telephony.default_network=8
-ro.telephony.ril_class=HTCMechaQualcommRIL
+ro.telephony.ril.v3=signalstrength
+ro.telephony.ril_class=HTCQualcommRIL
+service.modem.enable=1
+
+# Stock RIL Parameters
+ro.ril.oem.ecclist=112,911
+ro.ril.enable.a52=0
+ro.ril.enable.a53=1
+ro.ril.disable.fd.plmn.prefix=23402,23410,23411,23420
+ro.ril.enable.sdr=0
+
+# Carrier Properties
+gsm.sim.operator.alpha=Verizon
+gsm.sim.operator.iso-country=us
+gsm.sim.operator.numeric=310012
+gsm.operator.alpha=Verizon
+gsm.operator.iso-country=us
+gsm.operator.numeric=310012
+ro.cdma.home.operator.alpha=Verizon
+ro.cdma.home.operator.numeric=310012
+
+# Device needs to get CDMA subscription when RUIM is ready
+ro.cdma.subscribe_on_ruim_ready = true
+
+# Modify MMS APN retry timer from 5s to 2s
+ro.gsm.2nd_data_retry_config = max_retries=3, 2000, 2000, 2000
+# For Verizon data retry configuration
+ro.cdma.data_retry_config = max_retries=infinite,0,0,60000,120000,480000,900000
+
+# Modify MTU from 1500 to 1428 on 3G network
+ro.ril.set.mtusize = 1428
+
+# SIM
+ro.htc.device.slot1=RUIM
+persist.radio.no_wait_for_card=1
+persist.radio.apm_sim_not_pwdn=1
 
 # Device Interfaces
 wifi.interface=wlan0
 wifi.supplicant_scan_interval=180
-mobiledata.interfaces=rmnet_sdio0,rmnet_sdio1
+mobiledata.interfaces=rmnet_sdio0,rmnet_sdio1,wlan0,gprs,ppp0
+# liquid didn't have wlan0,gprs,ppp0
 
 # jerry.pj_chen [Start]20100730 For Verizon data retry
 ro.cdma.data_retry_config=max_retries=infinite,0,0,60000,120000,480000,900000
 # jerry.pj_chen [Finish]20100730 For Verizon data retry
 
-# OpenGL Level
+# OpenGL ES API Level
 ro.opengles.version=131072
 
 # Dalvik Heapsize
 dalvik.vm.heapsize=128m
-dalvik.vm.heapstartsize=16m
+dalvik.vm.heapstartsize=5m
+# 16MB instead?
 dalvik.vm.heapgrowthlimit=64m
 
 # Usb Storage
 ro.vold.umsdirtyratio=40
 persist.service.adb.enable=1
 persist.sys.usb.config=mass_storage,adb
+
+# Emmc Phone Storage
+ro.phone_storage=0
+
+# CNE Module
+persist.cne.UseCne=false
+persist.cne.bat.range.low.med=30
+persist.cne.bat.range.med.high=60
+persist.cne.loc.policy.op=/system/etc/OperatorPolicy.xml
+persist.cne.loc.policy.user=/system/etc/UserPolicy.xml
+persist.cne.bwbased.rat.sel=false
+persist.cne.snsr.based.rat.mgt=false
+persist.cne.bat.based.rat.mgt=false
+persist.cne.be.ge.sqi.min=0
+persist.cne.be.ge.sqi.max=100
+persist.cne.be.umts.sqi.min=0
+persist.cne.be.umts.sqi.max=100
+persist.cne.be.hspa.sqi.min=0
+persist.cne.be.hspa.sqi.max=100
+persist.cne.be.1x.sqi.min=0
+persist.cne.be.1x.sqi.max=100
+persist.cne.be.do.sqi.min=0
+persist.cne.be.do.sqi.max=100
+persist.cne.be.wlan.sqi.min=0
+persist.cne.be.wlan.sqi.max=100
+
+# Data Buffers
+net.tcp.buffersize.default=4096,87380,110208,4096,16384,110208
+net.tcp.buffersize.evdo_b=4094,87380,262144,4096,16384,262144
+net.tcp.buffersize.lte=4096,221184,3461120,4096,221184,3461120
+
+# System OTA Settings
+ro.config.htc.nocheckin=1
+
+# Twisted Customizations
+ro.media.enc.jpeg.quality=100
+ro.kernel.android.checkjni=0
+persist.sys.camera-sound=1
+drm.service.enabled=true

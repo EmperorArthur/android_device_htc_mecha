@@ -1,0 +1,10 @@
+[
+  {
+    "repository": "android_device_htc_7x30-recovery",
+    "target_path": "device/htc/7x30-recovery"
+  },
+  {
+    "repository": "android_device_htc_common",
+    "target_path": "device/htc/common"
+  }
+]

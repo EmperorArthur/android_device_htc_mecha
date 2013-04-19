@@ -1,2 +1,2 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/liquid.mk
+    $(LOCAL_DIR)/device_mecha.mk
