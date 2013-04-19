@@ -16,7 +16,6 @@ bin/rild
 bin/rmt_storage
 bin/snd3254
 bin/tc
-etc/AudioBTID.csv
 lib/libaudioalsa.so
 lib/libauth.so
 lib/libcamera.so
@@ -89,12 +88,6 @@ etc/firmware/a225_pfp.fw
 etc/firmware/a225_pm4.fw
 etc/firmware/a300_pfp.fw
 etc/firmware/a300_pm4.fw
-# Note: these firmwares are in msm7x30-common
-#etc/firmware/leia_pfp_470.fw
-#etc/firmware/leia_pm4_470.fw
-#etc/firmware/yamato_pfp.fw
-#etc/firmware/yamato_pm4.fw
-# Note: egl.cfg also in msm7x30-common
 lib/egl/egl.cfg
 lib/egl/eglsubAndroid.so
 lib/egl/libEGL_adreno200.so
