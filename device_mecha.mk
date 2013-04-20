@@ -22,8 +22,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 ## (1) First, the most specific values, i.e. the aspects that are specific to GSM
 
 PRODUCT_COPY_FILES += \
-    device/htc/mecha/kernel/init.mecha.rc:root/init.mecha.rc \
-    device/htc/mecha/kernel/ueventd.mecha.rc:root/ueventd.mecha.rc
+    device/htc/mecha/ramdisk/init.mecha.rc:root/init.mecha.rc \
+    device/htc/mecha/ramdisk/ueventd.mecha.rc:root/ueventd.mecha.rc
 
 ## (2) Also get non-open-source GSM-specific aspects if available
 $(call inherit-product-if-exists, vendor/htc/mecha/mecha-vendor.mk)
