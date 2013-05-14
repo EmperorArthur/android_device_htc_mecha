@@ -64,7 +64,7 @@ telephony.lteOnCdmaDevice=1
 # 8 => CDMA/EVDO/LTE auto mode
 ro.telephony.default_network=8
 ro.telephony.ril.v3=signalstrength
-ro.telephony.ril_class=HTCQualcommRIL
+ro.telephony.ril_class=HTCMechaQualcommRIL
 service.modem.enable=1
 
 # Stock RIL Parameters
