@@ -12,7 +12,6 @@ bin/logcat2
 bin/lsc_camera
 bin/netmgrd
 bin/qmuxd
-bin/rild
 bin/rmt_storage
 bin/snd3254
 bin/tc
