@@ -15,7 +15,6 @@ bin/qmuxd
 bin/rmt_storage
 bin/snd3254
 bin/tc
-lib/hw/gps.mecha.so
 lib/libaudioalsa.so
 lib/libauth.so
 lib/libcamera.so
