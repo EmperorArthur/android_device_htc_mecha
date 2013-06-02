@@ -22,6 +22,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 ## (1) First, the most specific values, i.e. the aspects that are specific to GSM
 
 PRODUCT_COPY_FILES += \
+    device/htc/mecha/ramdisk/init.rc:root/init.rc \
     device/htc/mecha/ramdisk/init.mecha.rc:root/init.mecha.rc \
     device/htc/mecha/ramdisk/ueventd.mecha.rc:root/ueventd.mecha.rc
 
