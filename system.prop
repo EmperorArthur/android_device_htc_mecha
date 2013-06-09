@@ -9,17 +9,11 @@ ro.sf.lcd_density=240
 
 # Qcom Display
 dev.pm.dyn_samplingrate=1
-ro.sf.compbypass.enable=0
 debug.composition.type=gpu
 debug.egl.hw=1
 
 # Android Display
 windowsmgr.max_events_per_sec=150
-ro.config.disable_hw_accel=false
-
-# Size of font cache in hwui - prevents scrambled text
-ro.hwui.text_cache_width=1024
-ro.hwui.text_cache_height=768
 
 # Qcom Hardware
 com.qc.hardware=true
@@ -64,7 +58,7 @@ telephony.lteOnCdmaDevice=1
 # 8 => CDMA/EVDO/LTE auto mode
 ro.telephony.default_network=8
 ro.telephony.ril.v3=signalstrength
-ro.telephony.ril_class=HTCMechaQualcommRIL
+ro.telephony.ril_class=HTCQualcommRIL
 service.modem.enable=1
 
 # Stock RIL Parameters
