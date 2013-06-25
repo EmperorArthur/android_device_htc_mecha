@@ -47,7 +47,7 @@ PRODUCT_PROPERTY_OVERRIDES += \\
 # Prebuilt libraries that are needed to build open-source libraries
 PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libaudioalsa.so:obj/lib/libaudioalsa.so \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libcamera.so:obj/lib/libcamera.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/hw/camera.default.so:obj/lib/hw/camera.default.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libqc-opt.so:obj/lib/libqc-opt.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libril.so:obj/lib/libril.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libv8.so:obj/lib/libv8.so
