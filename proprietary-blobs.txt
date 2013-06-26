@@ -13,7 +13,6 @@ lib/libhtc_acoustic.so
 bin/akmd
 bin/bma150_usr
 bin/htc_ebdlogd
-bin/ip
 bin/logcat2
 bin/rmt_storage
 
