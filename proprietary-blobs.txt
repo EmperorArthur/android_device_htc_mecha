@@ -20,6 +20,7 @@ bin/rmt_storage
 bin/awb_camera
 bin/lsc_camera
 lib/hw/camera.default.so
+lib/libcameraface.so
 lib/libcamerapp.so
 lib/libchromatix_ov8810_default_video.so
 lib/libchromatix_ov8810_preview.so
