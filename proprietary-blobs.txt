@@ -20,10 +20,28 @@ bin/rmt_storage
 # camera
 bin/awb_camera
 bin/lsc_camera
-lib/libcamera.so
+lib/hw/camera.default.so
+lib/libcameraface.so
+lib/libcamerapp.so
+lib/libchromatix_ov8810_default_video.so
+lib/libchromatix_ov8810_preview.so
+lib/libchromatix_ov8830_default_video.so
+lib/libchromatix_ov8830_hfr.so
+lib/libchromatix_ov8830_preview.so
+lib/libchromatix_s5k3h1gx_default_video.so
+lib/libchromatix_s5k3h1gx_preview.so
+lib/libchromatix_s5k3h2yx_default_video.so
+lib/libchromatix_s5k3h2yx_hfr.so
+lib/libchromatix_s5k3h2yx_preview.so
+lib/libchromatix_s5k4e1gx_default_video.so
+lib/libchromatix_s5k4e1gx_preview.so
+lib/libchromatix_s5k4e5yx_default_video.so
+lib/libchromatix_s5k4e5yx_hfr.so
+lib/libchromatix_s5k4e5yx_preview.so
 lib/libmmipl.so
 lib/libmmjpeg.so
 lib/liboemcamera.so
+lib/libOlaEngine.so
 lib/libposteffect.so
 
 # radio
