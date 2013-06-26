@@ -1,41 +1,53 @@
+## HTC Vendor Blobs
+
 # Prebuilt libraries that are needed to build open-source libraries
-# libaudioalsa.so, libcamera.so, libqc-opt.so, libril.so, libv8.so
+# libaudioalsa.so, libcamera.so, libril.so
+
+# audio
+bin/snd3254
+lib/libgemini.so
+lib/libaudioalsa.so
+lib/libhtc_acoustic.so
+
+# binaries
 bin/akmd
-bin/awb_camera
 bin/bma150_usr
-bin/btld
-bin/dmagent
 bin/htc_ebdlogd
 bin/ip
-bin/ipd
 bin/logcat2
+bin/rmt_storage
+
+# camera
+bin/awb_camera
 bin/lsc_camera
+lib/libcamera.so
+lib/libmmipl.so
+lib/libmmjpeg.so
+lib/liboemcamera.so
+lib/libposteffect.so
+
+# radio
+bin/btld
+bin/dmagent
+bin/ipd
 bin/netmgrd
 bin/qmuxd
-bin/rmt_storage
-bin/snd3254
 bin/tc
-lib/libaudioalsa.so
 lib/libauth.so
-lib/libcamera.so
 lib/libcm_fusion.so
 lib/libcm.so
 lib/libdiag.so
 lib/libdll.so
 lib/libdsi_netctrl.so
 lib/libdsm.so
+lib/libdss.so
 lib/libdsutils.so
-lib/libgemini.so
 lib/libgsdi_exp.so
 lib/libgstk_exp.so
-lib/libhtc_acoustic.so
 lib/libidl.so
 lib/libmmgsdilib.so
-lib/libmmipl.so
-lib/libmmjpeg.so
 lib/libnetmgr.so
 lib/libnv.so
-lib/liboemcamera.so
 lib/liboem_rapi_fusion.so
 lib/liboem_rapi.so
 lib/liboncrpc.so
@@ -45,7 +57,6 @@ lib/libpdapi.so
 lib/libpdsm_atl.so
 lib/libping_lte_rpc.so
 lib/libping_mdm.so
-lib/libposteffect.so
 lib/libqdp.so
 lib/libqmiservices.so
 lib/libqmi.so
@@ -53,6 +64,7 @@ lib/libqueue.so
 lib/libril-qc-1.so
 lib/libril-qcril-hook-oem.so
 lib/libril.so
+lib/libuim.so
 lib/libwms_fusion.so
 lib/libwms.so
 lib/libwmsts.so
@@ -60,7 +72,16 @@ lib/libwsp_jni.so
 lib/libwsp.so
 xbin/wireless_modem
 
-# vendor_qcom proprietary files
+
+
+## QCOM Vendor Blobs
+
+# Prebuilt libraries that are needed to build open-source libraries
+# libqc-opt.so, libv8.so
+
+# Google DRM
+lib/libwvm.so
+
 # Prebuilt CodeAurora libraries
 lib/libDivxDrm.so
 lib/libmm-color-convertor.so
