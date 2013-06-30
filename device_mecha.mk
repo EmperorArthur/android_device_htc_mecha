@@ -51,18 +51,17 @@ PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml \
     frameworks/base/data/etc/android.hardware.camera.front.xml:system/etc/permissions/android.hardware.camera.front.xml
 
-# Device XML Properties
+# configs
 PRODUCT_COPY_FILES += \
-    device/htc/mecha/configs/voicemail-conf.xml:system/etc/voicemail-conf.xml
-    
-# GPS Configuration
-PRODUCT_COPY_FILES += \
-    device/htc/mecha/configs/gps.conf:system/etc/gps.conf
+    device/htc/mecha/configs/gps.conf:system/etc/gps.conf \
+    device/htc/mecha/configs/voicemail-conf.xml:system/etc/voicemail-conf.xml \
+    device/htc/mecha/configs/vold.fstab:system/etc/vold.fstab
 
+# packages
 PRODUCT_PACKAGES += \
+    gps.mecha \
     lights.mecha \
     sensors.mecha \
-    gps.mecha
 
 # amtel
 PRODUCT_COPY_FILES += \
@@ -89,12 +88,7 @@ PRODUCT_COPY_FILES += \
     device/htc/mecha/firmware/fw_bcm4329.bin:system/vendor/firmware/fw_bcm4329.bin \
     device/htc/mecha/firmware/fw_bcm4329_apsta.bin:system/vendor/firmware/fw_bcm4329_apsta.bin
 
-PRODUCT_COPY_FILES += $(shell \
-    find device/htc/mecha/dsp/soundimage -name '*.txt' \
-    | sed -r 's/^\/?(.*\/)([^/ ]+)$$/\1\2:system\/etc\/soundimage\/\2/' \
-    | tr '\n' ' ')
-
-# Audio DSP Profiles
+# dsp
 PRODUCT_COPY_FILES += \
     device/htc/mecha/dsp/AIC3254_REG.csv:system/etc/AIC3254_REG.csv \
     device/htc/mecha/dsp/AIC3254_REG_DualMic.csv:system/etc/AIC3254_REG_DualMic.csv \
@@ -109,8 +103,11 @@ PRODUCT_COPY_FILES += \
     device/htc/mecha/dsp/SPK_Combination.csv:system/etc/SPK_Combination.csv \
     device/htc/mecha/dsp/TPA2051_CFG.csv:system/etc/TPA2051_CFG.csv
 
-PRODUCT_COPY_FILES += \
-    device/htc/mecha/configs/vold.fstab:system/etc/vold.fstab
+# profiles
+PRODUCT_COPY_FILES += $(shell \
+    find device/htc/mecha/dsp/soundimage -name '*.txt' \
+    | sed -r 's/^\/?(.*\/)([^/ ]+)$$/\1\2:system\/etc\/soundimage\/\2/' \
+    | tr '\n' ' ')
 
 # stuff common to all HTC phones
 $(call inherit-product-if-exists, device/htc/common/common.mk)
