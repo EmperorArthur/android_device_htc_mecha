@@ -63,6 +63,11 @@ PRODUCT_PACKAGES += \
     lights.mecha \
     sensors.mecha \
 
+# wireless
+PRODUCT_PACKAGES += \
+    fw_bcm4329.bin \
+    fw_bcm4329_apsta.bin
+
 # amtel
 PRODUCT_COPY_FILES += \
     device/htc/mecha/usr/idc/atmel-touchscreen.idc:system/usr/idc/atmel-touchscreen.idc
@@ -84,9 +89,7 @@ PRODUCT_COPY_FILES += \
     device/htc/mecha/firmware/default.acdb:system/etc/firmware/default.acdb \
     device/htc/mecha/firmware/default_org.acdb:system/etc/firmware/default_org.acdb \
     device/htc/mecha/firmware/default_mfg.acdb:system/etc/firmware/default_mfg.acdb \
-    device/htc/mecha/firmware/bcm4329.hcd:system/vendor/firmware/bcm4329.hcd \
-    device/htc/mecha/firmware/fw_bcm4329.bin:system/vendor/firmware/fw_bcm4329.bin \
-    device/htc/mecha/firmware/fw_bcm4329_apsta.bin:system/vendor/firmware/fw_bcm4329_apsta.bin
+    device/htc/mecha/firmware/bcm4329.hcd:system/vendor/firmware/bcm4329.hcd
 
 # dsp
 PRODUCT_COPY_FILES += \
