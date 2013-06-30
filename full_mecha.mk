@@ -31,7 +31,7 @@ $(call inherit-product, device/htc/mecha/device_mecha.mk)
 
 # VZW APN List
 PRODUCT_COPY_FILES += \
-    device/htc/mecha/system/etc/apns-conf.xml:system/etc/apns-conf.xml
+    device/htc/mecha/configs/apns-conf.xml:system/etc/apns-conf.xml
 
 # Set those variables here to overwrite the inherited values.
 PRODUCT_NAME := full_mecha
