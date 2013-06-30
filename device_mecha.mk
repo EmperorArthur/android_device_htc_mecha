@@ -52,11 +52,11 @@ PRODUCT_COPY_FILES += \
 
 # Device XML Properties
 PRODUCT_COPY_FILES += \
-    device/htc/mecha/system/etc/voicemail-conf.xml:system/etc/voicemail-conf.xml
+    device/htc/mecha/configs/voicemail-conf.xml:system/etc/voicemail-conf.xml
     
 # GPS Configuration
 PRODUCT_COPY_FILES += \
-    device/htc/mecha/system/etc/gps.conf:system/etc/gps.conf
+    device/htc/mecha/configs/gps.conf:system/etc/gps.conf
 
 PRODUCT_PACKAGES += \
     lights.mecha \
@@ -65,51 +65,51 @@ PRODUCT_PACKAGES += \
 
 # amtel
 PRODUCT_COPY_FILES += \
-    device/htc/mecha/system/usr/idc/atmel-touchscreen.idc:system/usr/idc/atmel-touchscreen.idc
+    device/htc/mecha/usr/idc/atmel-touchscreen.idc:system/usr/idc/atmel-touchscreen.idc
 
 # keychars and keylayouts
 PRODUCT_COPY_FILES += \
-    device/htc/mecha/system/usr/keychars/qwerty2.kcm.bin:system/usr/keychars/qwerty2.kcm.bin \
-    device/htc/mecha/system/usr/keychars/qwerty.kcm.bin:system/usr/keychars/qwerty.kcm.bin \
-    device/htc/mecha/system/usr/keychars/mecha-keypad.kcm.bin:system/usr/keychars/mecha-keypad.kcm.bin \
-    device/htc/mecha/system/usr/keychars/mecha-keypad-v0.kcm.bin:system/usr/keychars/mecha-keypad-v0.kcm.bin \
-    device/htc/mecha/system/usr/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
-    device/htc/mecha/system/usr/keylayout/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl \
-    device/htc/mecha/system/usr/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
-    device/htc/mecha/system/usr/keylayout/mecha-keypad-v0.kl:system/usr/keylayout/mecha-keypad-v0.kl \
-    device/htc/mecha/system/usr/keylayout/mecha-keypad.kl:system/usr/keylayout/mecha-keypad.kl
+    device/htc/mecha/usr/keychars/qwerty2.kcm.bin:system/usr/keychars/qwerty2.kcm.bin \
+    device/htc/mecha/usr/keychars/qwerty.kcm.bin:system/usr/keychars/qwerty.kcm.bin \
+    device/htc/mecha/usr/keychars/mecha-keypad.kcm.bin:system/usr/keychars/mecha-keypad.kcm.bin \
+    device/htc/mecha/usr/keychars/mecha-keypad-v0.kcm.bin:system/usr/keychars/mecha-keypad-v0.kcm.bin \
+    device/htc/mecha/usr/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
+    device/htc/mecha/usr/keylayout/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl \
+    device/htc/mecha/usr/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
+    device/htc/mecha/usr/keylayout/mecha-keypad-v0.kl:system/usr/keylayout/mecha-keypad-v0.kl \
+    device/htc/mecha/usr/keylayout/mecha-keypad.kl:system/usr/keylayout/mecha-keypad.kl
 
 # firmware
 PRODUCT_COPY_FILES += \
-    device/htc/mecha/system/etc/firmware/default.acdb:system/etc/firmware/default.acdb \
-    device/htc/mecha/system/etc/firmware/default_org.acdb:system/etc/firmware/default_org.acdb \
-    device/htc/mecha/system/etc/firmware/default_mfg.acdb:system/etc/firmware/default_mfg.acdb \
-    device/htc/mecha/system/vendor/firmware/bcm4329.hcd:system/vendor/firmware/bcm4329.hcd \
-    device/htc/mecha/system/vendor/firmware/fw_bcm4329.bin:system/vendor/firmware/fw_bcm4329.bin \
-    device/htc/mecha/system/vendor/firmware/fw_bcm4329_apsta.bin:system/vendor/firmware/fw_bcm4329_apsta.bin
+    device/htc/mecha/firmware/default.acdb:system/etc/firmware/default.acdb \
+    device/htc/mecha/firmware/default_org.acdb:system/etc/firmware/default_org.acdb \
+    device/htc/mecha/firmware/default_mfg.acdb:system/etc/firmware/default_mfg.acdb \
+    device/htc/mecha/firmware/bcm4329.hcd:system/vendor/firmware/bcm4329.hcd \
+    device/htc/mecha/firmware/fw_bcm4329.bin:system/vendor/firmware/fw_bcm4329.bin \
+    device/htc/mecha/firmware/fw_bcm4329_apsta.bin:system/vendor/firmware/fw_bcm4329_apsta.bin
 
 PRODUCT_COPY_FILES += $(shell \
-    find device/htc/mecha/system/etc/soundimage -name '*.txt' \
+    find device/htc/mecha/dsp/soundimage -name '*.txt' \
     | sed -r 's/^\/?(.*\/)([^/ ]+)$$/\1\2:system\/etc\/soundimage\/\2/' \
     | tr '\n' ' ')
 
 # Audio DSP Profiles
 PRODUCT_COPY_FILES += \
-    device/htc/mecha/system/etc/AIC3254_REG.csv:system/etc/AIC3254_REG.csv \
-    device/htc/mecha/system/etc/AIC3254_REG_DualMic.csv:system/etc/AIC3254_REG_DualMic.csv \
-    device/htc/mecha/system/etc/AIC3254_REG_DualMicXD01.csv:system/etc/AIC3254_REG_DualMicXD01.csv \
-    device/htc/mecha/system/etc/AIC3254_REG_DualMicXD02.csv:system/etc/AIC3254_REG_DualMicXD02.csv \
-    device/htc/mecha/system/etc/AdieHWCodec.csv:system/etc/AdieHWCodec.csv \
-    device/htc/mecha/system/etc/AudioBTID.csv:system/etc/AudioBTID.csv \
-    device/htc/mecha/system/etc/CodecDSPID.txt:system/etc/CodecDSPID.txt \
-    device/htc/mecha/system/etc/CodecDSPID_BCLK.txt:system/etc/CodecDSPID_BCLK.txt \
-    device/htc/mecha/system/etc/HP_Audio.csv:system/etc/HP_Audio.csv \
-    device/htc/mecha/system/etc/HP_Video.csv:system/etc/HP_Video.csv \
-    device/htc/mecha/system/etc/SPK_Combination.csv:system/etc/SPK_Combination.csv \
-    device/htc/mecha/system/etc/TPA2051_CFG.csv:system/etc/TPA2051_CFG.csv
+    device/htc/mecha/dsp/AIC3254_REG.csv:system/etc/AIC3254_REG.csv \
+    device/htc/mecha/dsp/AIC3254_REG_DualMic.csv:system/etc/AIC3254_REG_DualMic.csv \
+    device/htc/mecha/dsp/AIC3254_REG_DualMicXD01.csv:system/etc/AIC3254_REG_DualMicXD01.csv \
+    device/htc/mecha/dsp/AIC3254_REG_DualMicXD02.csv:system/etc/AIC3254_REG_DualMicXD02.csv \
+    device/htc/mecha/dsp/AdieHWCodec.csv:system/etc/AdieHWCodec.csv \
+    device/htc/mecha/dsp/AudioBTID.csv:system/etc/AudioBTID.csv \
+    device/htc/mecha/dsp/CodecDSPID.txt:system/etc/CodecDSPID.txt \
+    device/htc/mecha/dsp/CodecDSPID_BCLK.txt:system/etc/CodecDSPID_BCLK.txt \
+    device/htc/mecha/dsp/HP_Audio.csv:system/etc/HP_Audio.csv \
+    device/htc/mecha/dsp/HP_Video.csv:system/etc/HP_Video.csv \
+    device/htc/mecha/dsp/SPK_Combination.csv:system/etc/SPK_Combination.csv \
+    device/htc/mecha/dsp/TPA2051_CFG.csv:system/etc/TPA2051_CFG.csv
 
 PRODUCT_COPY_FILES += \
-    device/htc/mecha/system/etc/vold.fstab:system/etc/vold.fstab
+    device/htc/mecha/configs/vold.fstab:system/etc/vold.fstab
 
 # stuff common to all HTC phones
 $(call inherit-product-if-exists, device/htc/common/common.mk)
