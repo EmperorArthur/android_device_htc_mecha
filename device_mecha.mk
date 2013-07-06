@@ -64,8 +64,8 @@ PRODUCT_PACKAGES += \
 
 # wireless
 PRODUCT_PACKAGES += \
-    fw_bcm4329.bin \
-    fw_bcm4329_apsta.bin
+    fw_bcmdhd.bin \
+    fw_bcmdhd_apsta.bin
 
 # amtel
 PRODUCT_COPY_FILES += \
