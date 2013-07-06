@@ -58,9 +58,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     gps.mecha \
-    libbt-vendor \
-    lights.mecha \
-    sensors.mecha
+    libbt-vendor
 
 # amtel
 PRODUCT_COPY_FILES += \
