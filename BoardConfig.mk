@@ -25,24 +25,22 @@
 # against the traditional rules of inheritance).
 USE_CAMERA_STUB := true
 
-# inherit from common msm7x30 device
+# inherit from common msm7x30
 -include device/htc/msm7x30-common/BoardConfigCommon.mk
 
 # inherit from the proprietary version
 -include vendor/htc/mecha/BoardConfigVendor.mk
 
-# bootloader board name
 TARGET_BOOTLOADER_BOARD_NAME := mecha
+
+# camera fixes
+BOARD_HAVE_HTC_FFC := true
 
 # Use stock libril for now
 TARGET_PROVIDES_LIBRIL := vendor/htc/mecha/proprietary/libril.so
 BOARD_MOBILEDATA_INTERFACE_NAME := "rmnet_sdio0"
 BOARD_HAS_EXTRA_SYS_PROPS := true
 USE_IPV6_ROUTE := true
-
-# camera fix for mecha
-BOARD_HAVE_HTC_FFC := true
-BOARD_USE_REVERSE_FFC := true
 
 # GPS
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := mecha
