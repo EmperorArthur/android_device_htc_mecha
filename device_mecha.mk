@@ -62,11 +62,6 @@ PRODUCT_PACKAGES += \
     lights.mecha \
     sensors.mecha
 
-# wireless
-PRODUCT_PACKAGES += \
-    fw_bcmdhd.bin \
-    fw_bcmdhd_apsta.bin
-
 # amtel
 PRODUCT_COPY_FILES += \
     device/htc/mecha/usr/idc/atmel-touchscreen.idc:system/usr/idc/atmel-touchscreen.idc
