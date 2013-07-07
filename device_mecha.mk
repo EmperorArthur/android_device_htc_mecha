@@ -14,21 +14,23 @@
 # limitations under the License.
 #
 
-DEVICE_PACKAGE_OVERLAYS += device/htc/mecha/overlay
+# common msm7x30 configs
+$(call inherit-product, device/htc/msm7x30-common/msm7x30.mk)
+
+$(call inherit-product-if-exists, vendor/htc/mecha/mecha-vendor.mk)
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-## (1) First, the most specific values, i.e. the aspects that are specific to GSM
+# htc audio settings
+$(call inherit-product, device/htc/mecha/media_htcaudio.mk)
+$(call inherit-product, device/htc/mecha/media_a1026.mk)
+
+DEVICE_PACKAGE_OVERLAYS += device/htc/mecha/overlay
 
 PRODUCT_COPY_FILES += \
     device/htc/mecha/ramdisk/init.mecha.rc:root/init.mecha.rc \
     device/htc/mecha/ramdisk/ueventd.mecha.rc:root/ueventd.mecha.rc
 
-## (2) Also get non-open-source GSM-specific aspects if available
-$(call inherit-product-if-exists, vendor/htc/mecha/mecha-vendor.mk)
-
-## (3)  Finally, the least specific parts, i.e. the non-GSM-specific aspects
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.clientidbase.yt=android-htc \
     ro.com.google.clientidbase.am=android-verizon \
@@ -78,10 +80,10 @@ PRODUCT_COPY_FILES += \
 
 # firmware
 PRODUCT_COPY_FILES += \
+    device/htc/mecha/firmware/bcm4329.hcd:system/vendor/firmware/bcm4329.hcd \
     device/htc/mecha/firmware/default.acdb:system/etc/firmware/default.acdb \
-    device/htc/mecha/firmware/default_org.acdb:system/etc/firmware/default_org.acdb \
     device/htc/mecha/firmware/default_mfg.acdb:system/etc/firmware/default_mfg.acdb \
-    device/htc/mecha/firmware/bcm4329.hcd:system/vendor/firmware/bcm4329.hcd
+    device/htc/mecha/firmware/default_org.acdb:system/etc/firmware/default_org.acdb
 
 # dsp
 PRODUCT_COPY_FILES += \
@@ -103,15 +105,6 @@ PRODUCT_COPY_FILES += $(shell \
     find device/htc/mecha/dsp/soundimage -name '*.txt' \
     | sed -r 's/^\/?(.*\/)([^/ ]+)$$/\1\2:system\/etc\/soundimage\/\2/' \
     | tr '\n' ' ')
-
-# common msm7x30 configs
-$(call inherit-product, device/htc/msm7x30-common/msm7x30.mk)
-
-# htc audio settings
-$(call inherit-product, device/htc/mecha/media_htcaudio.mk)
-
-# media profiles and capabilities spec
-$(call inherit-product, device/htc/mecha/media_a1026.mk)
 
 # Default sounds and ringtones
 PRODUCT_PROPERTY_OVERRIDES += \

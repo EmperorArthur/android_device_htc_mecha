@@ -21,5 +21,3 @@
 # function: add_lunch_combo generic-eng
 
 add_lunch_combo cm_mecha-userdebug
-#add_lunch_combo full_mecha-eng
-#add_lunch_combo htc_mecha-userdebug
