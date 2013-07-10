@@ -28,7 +28,9 @@ $(call inherit-product, device/htc/mecha/media_a1026.mk)
 DEVICE_PACKAGE_OVERLAYS += device/htc/mecha/overlay
 
 PRODUCT_COPY_FILES += \
+    device/htc/mecha/ramdisk/fstab.mecha:root/fstab.mecha \
     device/htc/mecha/ramdisk/init.mecha.rc:root/init.mecha.rc \
+    device/htc/mecha/ramdisk/init.mecha.usb.rc:root/init.mecha.usb.rc \
     device/htc/mecha/ramdisk/ueventd.mecha.rc:root/ueventd.mecha.rc
 
 PRODUCT_PROPERTY_OVERRIDES += \
