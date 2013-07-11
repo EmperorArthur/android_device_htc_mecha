@@ -61,6 +61,7 @@ lib/libdss.so
 lib/libdsutils.so
 lib/libgsdi_exp.so
 lib/libgstk_exp.so
+lib/libhtc_ril_switch.so
 lib/libidl.so
 lib/libmmgsdilib.so
 lib/libnetmgr.so
@@ -98,14 +99,27 @@ lib/libwsp.so
 # Google DRM
 lib/libwvm.so
 
+## msm7x30-common Blobs
+lib/libWVStreamControlAPI_L3.so
+lib/libwebkitaccel.so
+lib/libwvdrm_L3.so
+
 # Prebuilt CodeAurora libraries
 lib/libqc-opt.so
 lib/libv8.so
 
 # Prebuilt Adreno 2xx libraries
-etc/firmware/a225p5_pm4.fw
-etc/firmware/a225_pfp.fw
-etc/firmware/a225_pm4.fw
+etc/firmware/leia_pfp_470.fw
+etc/firmware/leia_pm4_470.fw
+etc/firmware/vidc_720p_command_control.fw
+etc/firmware/vidc_720p_h263_dec_mc.fw
+etc/firmware/vidc_720p_h264_dec_mc.fw
+etc/firmware/vidc_720p_h264_enc_mc.fw
+etc/firmware/vidc_720p_mp4_dec_mc.fw
+etc/firmware/vidc_720p_mp4_enc_mc.fw
+etc/firmware/vidc_720p_vc1_dec_mc.fw
+etc/firmware/yamato_pfp.fw
+etc/firmware/yamato_pm4.fw
 lib/egl/egl.cfg
 lib/egl/eglsubAndroid.so
 lib/egl/libEGL_adreno200.so
