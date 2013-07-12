@@ -1,23 +1,27 @@
+windowsmgr.max_events_per_sec=275
 #
 # system.prop for mecha
 #
-
-# Screen Density
-debug.sf.hw=1
+## cannot take spaces
 debug.fb.rgb565=0
 ro.sf.lcd_density=240
 
 # Qcom Display
-dev.pm.dyn_samplingrate=1
-debug.composition.type=gpu
+debug.sf.hw=1
 debug.egl.hw=1
-
-# Android Display
-windowsmgr.max_events_per_sec=150
+debug.composition.type=gpu
 
 # Qcom Hardware
 com.qc.hardware=true
 com.qc.hdmi_out=false
+dev.pm.dyn_samplingrate=1
+
+# RIL Properties
+mobiledata.interfaces=rmnet0,rmnet_sdio0
+ro.telephony.ril_class=HTCMechaQualcommRIL
+ro.config.qc_lte_network_modes=true
+ro.telephony.default_network=8
+telephony.lteOnCdmaDevice=1
 
 # Radio Properties
 rild.libpath=/system/lib/libril-qc-1.so
@@ -31,88 +35,9 @@ persist.rild.nitz_short_ons_0=
 persist.rild.nitz_short_ons_1=
 persist.rild.nitz_short_ons_2=
 persist.rild.nitz_short_ons_3=
-persist.rild.ril.bva=0
 persist.rild.ril.ltedr=0
 persist.rild.ril.ltedrtable=max_retries=infinite,10000
 DEVICE_PROVISIONED=1
-
-# Agps Default Mode
-persist.radio.agps.mode=6
-ro.ril.def.agps.mode=6
-
-# Data Modules
-ro.use_data_netmgrd=true
-persist.data_netmgrd_nint=16
-persist.data_netmgrd_mtu=1428
-
-# Device Supports LTE
-ro.config.lte=true
-# Device Supports EHRPD
-ro.config.ehrpd=true
-# Simultaneous Voice/LTE
-ro.config.svlte1x=true
-
-# RIL Properties
-telephony.lteOnCdmaDevice=1
-# Default Network Type
-# 8 => CDMA/EVDO/LTE auto mode
-ro.telephony.default_network=8
-ro.telephony.ril.v3=signalstrength
-ro.telephony.ril_class=HTCQualcommRIL
-service.modem.enable=1
-
-# Stock RIL Parameters
-ro.ril.oem.ecclist=112,911
-ro.ril.enable.a52=0
-ro.ril.enable.a53=1
-ro.ril.disable.fd.plmn.prefix=23402,23410,23411,23420
-ro.ril.enable.sdr=0
-
-# Carrier Properties
-gsm.sim.operator.alpha=Verizon
-gsm.sim.operator.iso-country=us
-gsm.sim.operator.numeric=310012
-gsm.operator.alpha=Verizon
-gsm.operator.iso-country=us
-gsm.operator.numeric=310012
-ro.cdma.home.operator.alpha=Verizon
-ro.cdma.home.operator.numeric=310012
-
-# Device needs to get CDMA subscription when RUIM is ready
-ro.cdma.subscribe_on_ruim_ready = true
-
-# Modify MMS APN retry timer from 5s to 2s
-ro.gsm.2nd_data_retry_config = max_retries=3, 2000, 2000, 2000
-# For Verizon data retry configuration
-ro.cdma.data_retry_config = max_retries=infinite,0,0,60000,120000,480000,900000
-
-# Modify MTU from 1500 to 1428 on 3G network
-ro.ril.set.mtusize = 1428
-
-# SIM
-ro.htc.device.slot1=RUIM
-persist.radio.no_wait_for_card=1
-persist.radio.apm_sim_not_pwdn=1
-
-# Device Interfaces
-wifi.interface=wlan0
-wifi.supplicant_scan_interval=180
-mobiledata.interfaces=rmnet_sdio0,rmnet_sdio1,wlan0,gprs,ppp0
-
-# jerry.pj_chen [Start]20100730 For Verizon data retry
-ro.cdma.data_retry_config=max_retries=infinite,0,0,60000,120000,480000,900000
-# jerry.pj_chen [Finish]20100730 For Verizon data retry
-
-# OpenGL ES API Level
-ro.opengles.version=131072
-
-# Usb Storage
-ro.vold.umsdirtyratio=40
-persist.service.adb.enable=1
-persist.sys.usb.config=mass_storage,adb
-
-# Emmc Phone Storage
-ro.phone_storage=0
 
 # CNE Module
 persist.cne.UseCne=false
@@ -136,16 +61,44 @@ persist.cne.be.do.sqi.max=100
 persist.cne.be.wlan.sqi.min=0
 persist.cne.be.wlan.sqi.max=100
 
-# Data Buffers
-net.tcp.buffersize.default=4096,87380,110208,4096,16384,110208
-net.tcp.buffersize.evdo_b=4094,87380,262144,4096,16384,262144
-net.tcp.buffersize.lte=4096,221184,3461120,4096,221184,3461120
+# Data Modules
+ro.use_data_netmgrd=true
+persist.data_netmgrd_nint=16
+persist.data_netmgrd_mtu=1428
 
-# System OTA Settings
-ro.config.htc.nocheckin=1
+# Device Supports LTE
+ro.config.lte=true
+# Simultaneous Voice/LTE
+ro.config.svlte1x=true
 
-# Twisted Customizations
-ro.media.enc.jpeg.quality=100
-ro.kernel.android.checkjni=0
-persist.sys.camera-sound=1
-drm.service.enabled=true
+# Carrier Properties
+ro.cdma.home.operator.alpha=Verizon
+gsm.sim.operator.alpha=Verizon
+gsm.operator.alpha=Verizon
+ro.cdma.home.operator.numeric=311480
+gsm.sim.operator.numeric=311480
+gsm.operator.numeric=311480
+
+# CDMA Subscription When RUIM Ready
+ro.cdma.subscribe_on_ruim_ready=true
+
+# Verizon Data Retry Configuration
+ro.cdma.data_retry_config=max_retries=infinite,0,0,60000,120000,480000,900000
+ro.gsm.data_retry_config=max_retries=infinite,5000,5000,60000,120000,480000,900000
+
+# Device Interface
+wifi.interface=wlan0
+wifi.supplicant_scan_interval=180
+
+# OpenGL Level
+ro.opengles.version=131072
+
+# SIM Interface
+ro.htc.device.slot1=RUIM
+persist.radio.no_wait_for_card=1
+persist.radio.apm_sim_not_pwdn=1
+
+# USB Storage
+ro.vold.umsdirtyratio=40
+persist.service.adb.enable=1
+persist.sys.usb.config=mass_storage,adb
