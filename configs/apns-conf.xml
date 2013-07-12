@@ -81,28 +81,4 @@
   <apn carrier="EHRPD - VZW Test FOTA" mcc="246" mnc="081" apn="VZWADMIN" type="fota" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="13" />
   <apn carrier="EHRPD - VZW Test IMS" mcc="246" mnc="081" apn="VZWIMS" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="13" />
   <apn carrier="EHRPD - VZW Test CBS" mcc="246" mnc="081" apn="VZWAPP" type="cbs,mms" mmsc="http://mms.vtext.com/servlets/mms" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="13" />
-  
-  <!-- HTC ThunderBolt Stock ICS Complete apns.xml -->
-      <apn carrier="Production" apn="1" mmsc="http://mms.vtext.com/servlets/mms" mmsprotocol="2.0" mcc="000" mnc="00" type="mms" />
-    <apn carrier="Internet" apn="VZWINTERNET" mmsc="http://mms.vtext.com/servlets/mms" mcc="310" mnc="012" type="default,hipri" state="readonly" />
-    <apn carrier="Internet" apn="VZWINTERNET" mmsc="http://mms.vtext.com/servlets/mms" mcc="311" mnc="280" type="default,hipri" state="readonly" />
-    <apn carrier="Internet" apn="VZWINTERNET" mmsc="http://mms.vtext.com/servlets/mms" mcc="311" mnc="281" type="default,hipri" state="readonly" />
-    <apn carrier="Internet" apn="VZWINTERNET" mmsc="http://mms.vtext.com/servlets/mms" mcc="311" mnc="282" type="default,hipri" state="readonly" />
-    <apn carrier="Internet" apn="VZWINTERNET" mmsc="http://mms.vtext.com/servlets/mms" mcc="311" mnc="283" type="default,hipri" state="readonly" />
-    <apn carrier="Internet" apn="VZWINTERNET" mmsc="http://mms.vtext.com/servlets/mms" mcc="311" mnc="284" type="default,hipri" state="readonly" />
-    <apn carrier="Internet" apn="VZWINTERNET" mmsc="http://mms.vtext.com/servlets/mms" mcc="311" mnc="285" type="default,hipri" state="readonly" />
-    <apn carrier="Internet" apn="VZWINTERNET" mmsc="http://mms.vtext.com/servlets/mms" mcc="311" mnc="286" type="default,hipri" state="readonly" />
-    <apn carrier="Internet" apn="VZWINTERNET" mmsc="http://mms.vtext.com/servlets/mms" mcc="311" mnc="287" type="default,hipri" state="readonly" />
-    <apn carrier="Internet" apn="VZWINTERNET" mmsc="http://mms.vtext.com/servlets/mms" mcc="311" mnc="288" type="default,hipri" state="readonly" />
-    <apn carrier="Internet" apn="VZWINTERNET" mmsc="http://mms.vtext.com/servlets/mms" mcc="311" mnc="289" type="default,hipri" state="readonly" />
-    <apn carrier="Internet" apn="VZWINTERNET" mmsc="http://mms.vtext.com/servlets/mms" mcc="311" mnc="480" type="default,hipri" state="readonly" />
-    <apn carrier="Internet" apn="VZWINTERNET" mmsc="http://mms.vtext.com/servlets/mms" mcc="311" mnc="481" type="default,hipri" state="readonly" />
-    <apn carrier="Internet" apn="VZWINTERNET" mmsc="http://mms.vtext.com/servlets/mms" mcc="311" mnc="482" type="default,hipri" state="readonly" />
-    <apn carrier="Internet" apn="VZWINTERNET" mmsc="http://mms.vtext.com/servlets/mms" mcc="311" mnc="483" type="default,hipri" state="readonly" />
-    <apn carrier="Internet" apn="VZWINTERNET" mmsc="http://mms.vtext.com/servlets/mms" mcc="311" mnc="484" type="default,hipri" state="readonly" />
-    <apn carrier="Internet" apn="VZWINTERNET" mmsc="http://mms.vtext.com/servlets/mms" mcc="311" mnc="485" type="default,hipri" state="readonly" />
-    <apn carrier="Internet" apn="VZWINTERNET" mmsc="http://mms.vtext.com/servlets/mms" mcc="311" mnc="486" type="default,hipri" state="readonly" />
-    <apn carrier="Internet" apn="VZWINTERNET" mmsc="http://mms.vtext.com/servlets/mms" mcc="311" mnc="487" type="default,hipri" state="readonly" />
-    <apn carrier="Internet" apn="VZWINTERNET" mmsc="http://mms.vtext.com/servlets/mms" mcc="311" mnc="488" type="default,hipri" state="readonly" />
-    <apn carrier="Internet" apn="VZWINTERNET" mmsc="http://mms.vtext.com/servlets/mms" mcc="311" mnc="489" type="default,hipri" state="readonly" />
 </apns>
