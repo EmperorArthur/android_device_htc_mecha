@@ -40,7 +40,6 @@ on property:sys.usb.config=mtp,adb
     write /sys/devices/platform/android_usb/usb_function_switch 130
     setprop sys.usb.state ${sys.usb.config}
 
-
 on property:sys.usb.config=ptp
     write /sys/class/android_usb/android0/f_ptp/on 1
     write /sys/devices/platform/android_usb/usb_function_switch 128
@@ -51,4 +50,3 @@ on property:sys.usb.config=ptp,adb
     write /sys/class/android_usb/android0/f_ptp/on 1
     write /sys/devices/platform/android_usb/usb_function_switch 130
     setprop sys.usb.state ${sys.usb.config}
-
