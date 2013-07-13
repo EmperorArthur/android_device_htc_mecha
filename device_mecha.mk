@@ -89,7 +89,7 @@ PRODUCT_COPY_FILES += \
 
 # products
 PRODUCT_TAGS += dalvik.gc.type-precise
-PRODUCT_LOCALES += en
+PRODUCT_LOCALES += en_US
 PRODUCT_AAPT_CONFIG := normal hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 
