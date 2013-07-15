@@ -17,7 +17,7 @@ com.qc.hdmi_out=false
 dev.pm.dyn_samplingrate=1
 
 # RIL Properties
-mobiledata.interfaces=rmnet0,rmnet_sdio0
+mobiledata.interfaces=rmnet_sdio0,rmnet_sdio1
 ro.telephony.ril_class=HTCMechaQualcommRIL
 ro.config.qc_lte_network_modes=true
 ro.telephony.default_network=8
@@ -68,6 +68,7 @@ persist.data_netmgrd_mtu=1428
 
 # Device Supports LTE
 ro.config.lte=true
+
 # Simultaneous Voice/LTE
 ro.config.svlte1x=true
 
