@@ -28,8 +28,7 @@
 
 #camera
 /dev/gemini0              0660   system     camera
-/dev/pmem_smipool*        0660   system     camera
-/dev/video*               0660   system     camera
+/dev/msm_camera/*         0660   system     camera
 
 #graphics
 /dev/msm_rotator          0660   system     graphics
@@ -37,17 +36,20 @@
 /dev/kgsl-2d0             0666   root       root
 /dev/kgsl-2d1             0666   root       root
 
-#genlock
+#other
 /dev/genlock              0666   root       root
 
 #radio
-/dev/oncrpc/*             0660   root       qcom_oncrpc
+/dev/oncrpc/*             0660   radio      system
+/dev/smdcntl0             0640   radio      radio
+/dev/smdcntl1             0640   radio      radio
+/dev/smdcntl2             0640   radio      radio
 /dev/radio_feedback       0660   radio      radio
-/dev/rmnet_mux_ctrl       0640   radio      radio
-/dev/smd*                 0640   radio      radio
-/dev/sdioctl*             0640   radio      radio
-/dev/smdcntl*             0640   radio      radio
-/dev/qmi*                 0640   radio      radio
+/dev/smd0                 0640   radio      radio
+/dev/smd9                 0600   system     system
+/dev/qmi0                 0640   radio      radio
+/dev/qmi1                 0640   radio      radio
+/dev/qmi2                 0640   radio      radio
 
 #sensors
 /dev/akm8975_daemon       0640   compass    system
