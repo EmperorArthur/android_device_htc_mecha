@@ -21,7 +21,6 @@
   <item name="screen.on">90</item> <!-- Estimated -->
   <item name="bluetooth.active">142</item> <!-- In call -->
   <item name="bluetooth.on">0.3</item>
-  <!-- CPU wakelock held for 830ms on bluetooth headset at command. 43mA * 830 -->
   <item name="bluetooth.at">35690</item>
   <item name="screen.full">200</item> <!-- Estimated -->
   <item name="wifi.on">4</item>
@@ -41,13 +40,19 @@
     <value>245760</value>
     <value>368640</value>
     <value>768000</value>
+    <value>806400</value>
     <value>1024000</value>
-    <value>1113600</value>
-    <value>1209600</value>
+    <value>1200000</value>
     <value>1305600</value>
     <value>1401600</value>
-    <value>1497600</value>
     <value>1516800</value>
+    <value>1612800</value>
+    <value>1689600</value>
+    <value>1766400</value>
+    <value>1843200</value>
+    <value>1920000</value>
+    <value>1996800</value>
+    <value>2016000</value>
   </array>
   <!-- Power consumption in suspend -->
   <item name="cpu.idle">3.0</item> <!-- from /sys/class/power_supply/battery/current_now -->
@@ -55,7 +60,6 @@
   <array name="cpu.active"> <!-- Estimated -->
       <value>60</value>
       <value>74.7</value>
-      <value>120.6</value>
       <value>154.9</value>
       <value>163.8</value>
       <value>173.2</value>
@@ -63,5 +67,12 @@
       <value>196.2</value>
       <value>208.9</value>
       <value>220.1</value>
+      <value>232</value>
+      <value>244</value>
+      <value>256</value>
+      <value>268</value>
+      <value>280</value>
+      <value>292</value>
+      <value>304</value>
   </array>
 </device>
