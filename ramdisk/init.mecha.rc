@@ -1,15 +1,13 @@
 import init.mecha.usb.rc
 
 on early-init
-    mkdir /storage 0555 root root
-    mkdir /storage/sdcard0 0555 root root
-    export EXTERNAL_STORAGE /storage/sdcard0
+    mkdir /storage 0775 root system
+    mkdir /storage/sdcard0 0000 system system
 
-    # Support legacy paths
+    # support legacy paths
     symlink /storage/sdcard0 /sdcard
-    symlink /sdcard /mnt/sdcard
-
-    device mtd@misc 0460 radio diag
+    symlink /storage/sdcard0 /mnt/sdcard
+    export EXTERNAL_STORAGE /storage/sdcard0
 
 on early-fs
     mkdir /devlog 0700 root root
