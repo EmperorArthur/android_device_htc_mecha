@@ -17,87 +17,44 @@ com.qc.hdmi_out=false
 dev.pm.dyn_samplingrate=1
 
 # RIL Properties
-mobiledata.interfaces=rmnet_sdio0,rmnet_sdio1
-ro.telephony.ril_class=HTCMechaQualcommRIL
+rild.libargs=-d /dev/smd0
+rild.libpath=/system/lib/libril-qc-1.so
+ro.vendor.extension_library=/system/lib/libqc-opt.so
+ro.telephony.ril_class=HTCQualcommRIL
+ro.cdma.home.operator.numeric=311480
+ro.cdma.home.operator.alpha=Verizon
 ro.config.qc_lte_network_modes=true
 ro.telephony.default_network=8
 telephony.lteOnCdmaDevice=1
-
-# Radio Properties
-rild.libpath=/system/lib/libril-qc-1.so
-rild.libargs=-d /dev/smd0
-persist.rild.nitz_plmn=
-persist.rild.nitz_long_ons_0=
-persist.rild.nitz_long_ons_1=
-persist.rild.nitz_long_ons_2=
-persist.rild.nitz_long_ons_3=
-persist.rild.nitz_short_ons_0=
-persist.rild.nitz_short_ons_1=
-persist.rild.nitz_short_ons_2=
-persist.rild.nitz_short_ons_3=
-persist.rild.ril.ltedr=0
-persist.rild.ril.ltedrtable=max_retries=infinite,10000
 DEVICE_PROVISIONED=1
-
-# CNE Module
-persist.cne.UseCne=false
-persist.cne.bat.range.low.med=30
-persist.cne.bat.range.med.high=60
-persist.cne.loc.policy.op=/system/etc/OperatorPolicy.xml
-persist.cne.loc.policy.user=/system/etc/UserPolicy.xml
-persist.cne.bwbased.rat.sel=false
-persist.cne.snsr.based.rat.mgt=false
-persist.cne.bat.based.rat.mgt=false
-persist.cne.be.ge.sqi.min=0
-persist.cne.be.ge.sqi.max=100
-persist.cne.be.umts.sqi.min=0
-persist.cne.be.umts.sqi.max=100
-persist.cne.be.hspa.sqi.min=0
-persist.cne.be.hspa.sqi.max=100
-persist.cne.be.1x.sqi.min=0
-persist.cne.be.1x.sqi.max=100
-persist.cne.be.do.sqi.min=0
-persist.cne.be.do.sqi.max=100
-persist.cne.be.wlan.sqi.min=0
-persist.cne.be.wlan.sqi.max=100
-
-# Data Modules
+ro.ril.gprsclass=10
+ro.ril.hsxpa=1
+ro.config.svlte1x=true
 ro.use_data_netmgrd=true
 persist.data_netmgrd_nint=16
-persist.data_netmgrd_mtu=1428
-
-# Device Supports LTE
-ro.config.lte=true
-
-# Simultaneous Voice/LTE
-ro.config.svlte1x=true
-
-# Carrier Properties
-ro.cdma.home.operator.alpha=Verizon
-gsm.sim.operator.alpha=Verizon
-gsm.operator.alpha=Verizon
-ro.cdma.home.operator.numeric=311480
-gsm.sim.operator.numeric=311480
-gsm.operator.numeric=311480
-
-# CDMA Subscription When RUIM Ready
+persist.radio.apm_sim_not_pwdn=1
+persist.radio.no_wait_for_card=1
 ro.cdma.subscribe_on_ruim_ready=true
+persist.rild.nitz_plmn=""
+persist.rild.nitz_long_ons_0=""
+persist.rild.nitz_long_ons_1=""
+persist.rild.nitz_long_ons_2=""
+persist.rild.nitz_long_ons_3=""
+persist.rild.nitz_short_ons_0=""
+persist.rild.nitz_short_ons_1=""
+persist.rild.nitz_short_ons_2=""
+persist.rild.nitz_short_ons_3=""
 
-# Verizon Data Retry Configuration
-ro.cdma.data_retry_config=max_retries=infinite,0,0,60000,120000,480000,900000
-ro.gsm.data_retry_config=max_retries=infinite,5000,5000,60000,120000,480000,900000
-
-# Device Interface
+# Device Interfaces
 wifi.interface=wlan0
 wifi.supplicant_scan_interval=180
+mobiledata.interfaces=rmnet0,rmnet_sdio0
 
 # OpenGL Level
 ro.opengles.version=131072
 
-# SIM Interface
-ro.htc.device.slot1=RUIM
-persist.radio.no_wait_for_card=1
-persist.radio.apm_sim_not_pwdn=1
+# Phone Storage
+ro.phone_storage=0
 
 # USB Storage
 ro.vold.umsdirtyratio=40
