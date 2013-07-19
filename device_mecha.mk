@@ -27,6 +27,7 @@ $(call inherit-product-if-exists, vendor/htc/mecha/mecha-vendor.mk)
 # telephony
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
+# animation
 TARGET_SCREEN_WIDTH := 480
 TARGET_SCREEN_HEIGHT := 800
 
@@ -113,8 +114,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.networklocation=1 \
     ro.setupwizard.enable_bypass=1 \
     ro.telephony.call_ring.delay=500 \
-    ro.telephony.call_ring.multiple=false \
-    ro.vendor.extension_library=/system/lib/libqc-opt.so
+    ro.telephony.call_ring.multiple=false
 
 # profiles
 PRODUCT_COPY_FILES += $(shell \
