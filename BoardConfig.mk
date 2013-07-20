@@ -46,7 +46,7 @@ BOARD_KERNEL_BASE := 0x05200000
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_KERNEL_CMDLINE := no_console_suspend=1
 TARGET_KERNEL_SOURCE := kernel/htc/msm7x30-3.0
-TARGET_KERNEL_CONFIG := santod_defconfig
+TARGET_KERNEL_CONFIG := santod_mecha_defconfig
 
 # sdcard
 BOARD_USES_MMCUTILS := true
